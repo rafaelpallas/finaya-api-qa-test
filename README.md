@@ -1,6 +1,6 @@
 # Finaya - QA API Test Automation
 
-Projeto de automação de testes de API para o endpoint `/posts` do JSONPlaceholder, demonstrando habilidades em **Java + RestAssured** e **Postman + Newman**.
+Projeto de automação de testes de API para o endpoint **/posts** do JSONPlaceholder, demonstrando habilidades em **Java + RestAssured** e **Postman + Newman**.
 
 ## Tecnologias Utilizadas
 
@@ -15,6 +15,9 @@ Projeto de automação de testes de API para o endpoint `/posts` do JSONPlacehol
 ## Estrutura do Projeto
 
 
+## Estrutura do Projeto
+
+```text
 ├── postman             # Collection e Environment exportados
 ├── reports             # Relatórios gerados pelo Newman
 ├── src/test
@@ -26,6 +29,7 @@ Projeto de automação de testes de API para o endpoint `/posts` do JSONPlacehol
 │       └── schemas     # Contratos JSON (.json)
 ├── pom.xml             # Dependências Maven
 └── README.md           # Documentação do projeto
+```
 
 ## Como Executar
 1. Testes Automatizados (Java)
