@@ -67,32 +67,37 @@ Newman: Incluído para demonstrar capacidade de integração contínua (CI/CD), 
 Os cenários foram modelados utilizando a sintaxe **Gherkin (BDD)**. 
 Este formato facilita a leitura tanto por desenvolvedores quanto por stakeholders, além de servir como base para automação.
 
-### Funcionalidade: Gestão de Postagens da API JSONPlaceholder
+```gherkin
+Funcionalidade: Gestão de Postagens da API JSONPlaceholder
 
-**Cenário 01: Listar todas as postagens com sucesso**
-  **Dado** que a API JSONPlaceholder está online
-  **Quando** eu envio uma requisição GET para o endpoint "/posts"
-  **Então** o status code da resposta deve ser 200
-  **E** o corpo da resposta deve conter uma lista com 100 postagens
-  **E** cada postagem deve conter os campos "userId", "id", "title" e "body"
+Cenário 01: Listar todas as postagens com sucesso
+  Dado que a API JSONPlaceholder está online
+  Quando eu envio uma requisição GET para o endpoint "/posts"
+  Então o status code da resposta deve ser 200
+  E o corpo da resposta deve conter uma lista com 100 postagens
+  E cada postagem deve conter os campos "userId", "id", "title" e "body"
 
-**Cenário 02: Consultar um post específico por ID (Contrato e Dados)**
-  **Dado** que desejo consultar a postagem com ID 1
-  **Quando** eu envio uma requisição GET para o endpoint "/posts/1"
-  **Então** o status code da resposta deve ser 200
-  **E** o campo "id" do retorno deve ser igual a 1
-  **E** os campos "title" e "userId" não devem ser nulos
-  **E** a estrutura do JSON deve respeitar o contrato definido (Schema)
 
-**Cenário 03: Validar consulta de post inexistente (Cenário Negativo)**
-  **Dado** que possuo um ID de postagem que não existe (ex: 99999)
-  **Quando** eu envio uma requisição GET para o endpoint "/posts/99999"
-  **Então** o status code da resposta deve ser 404 (Not Found)
-  **E** o corpo da resposta deve estar vazio ({})
+Cenário 02: Consultar um post específico por ID (Contrato e Dados)
+  Dado que desejo consultar a postagem com ID 1
+  Quando eu envio uma requisição GET para o endpoint "/posts/1"
+  Então o status code da resposta deve ser 200
+  E o campo "id" do retorno deve ser igual a 1
+  E os campos "title" e "userId" não devem ser nulos
+  E a estrutura do JSON deve respeitar o contrato definido (Schema)
 
-**Cenário 04: Validar tipos de dados do contrato (Schema Check)**
-  **Dado** que recebo os dados de uma postagem válida
-  **Então** o campo "userId" deve ser do tipo numérico
-  **E** o campo "id" deve ser do tipo numérico
-  **E** o campo "title" deve ser do tipo texto (string)
-  **E** o campo "body" deve ser do tipo texto (string)
+
+Cenário 03: Validar consulta de post inexistente (Cenário Negativo)
+  Dado que possuo um ID de postagem que não existe (ex: 99999)
+  Quando eu envio uma requisição GET para o endpoint "/posts/99999"
+  Então o status code da resposta deve ser 404 (Not Found)
+  E o corpo da resposta deve estar vazio ({})
+
+
+Cenário 04: Validar tipos de dados do contrato (Schema Check)
+  Dado que recebo os dados de uma postagem válida
+  Então o campo "userId" deve ser do tipo numérico
+  E o campo "id" deve ser do tipo numérico
+  E o campo "title" deve ser do tipo texto (string)
+  E o campo "body" deve ser do tipo texto (string)
+```
