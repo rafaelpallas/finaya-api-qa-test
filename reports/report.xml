@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="JSONPlaceholder_API" tests="2" time="0.224">
+  <testsuite name="GET - List Posts" id="616703a8-d847-4d9f-abc6-aee68b35163e" timestamp="2026-01-21T00:33:31.893Z" tests="3" failures="0" errors="0" time="0.131">
+    <testcase name="Status code is 200" time="0.131" classname="GetListPosts"/>
+    <testcase name="Response is an array with 100 posts" time="0.131" classname="GetListPosts"/>
+    <testcase name="Posts have required fields" time="0.131" classname="GetListPosts"/>
+  </testsuite>
+  <testsuite name="GET - Post by ID" id="e758a40e-f237-4142-bf9f-9388c5f0aee6" timestamp="2026-01-21T00:33:31.893Z" tests="3" failures="0" errors="0" time="0.093">
+    <testcase name="Status code is 200" time="0.093" classname="GetPostById"/>
+    <testcase name="Post ID matches environment variable" time="0.093" classname="GetPostById"/>
+    <testcase name="Required fields are not null" time="0.093" classname="GetPostById"/>
+  </testsuite>
+</testsuites>
