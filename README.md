@@ -12,8 +12,6 @@ Projeto de automação de testes de API para o endpoint **/posts** do JSONPlaceh
 - **Postman**: Criação e estruturação da coleção.
 - **Newman**: Execução da coleção via linha de comando (CLI) e geração de relatórios.
 
-## Estrutura do Projeto
-
 
 ## Estrutura do Projeto
 
